@@ -16,7 +16,7 @@ Given an object like:
 you can use a combination of `map_values`, `select` and `contains` to find the right object and then `keys` to get the matching keys:
 
 ```
-map_values(select(contains({"key": "value2"}))) | keys | .[]
+map_values(select(contains({"key": "value2"}))) | keys[]
 ```
 
 * `contains(element)`: returns `true` if whatever is passed into it matches
@@ -26,7 +26,7 @@ map_values(select(contains({"key": "value2"}))) | keys | .[]
 the same function can also be written using the update-assignment operator `|=`:
 
 ```
-.[] |= select(contains({"key": "value2"})) | keys | .[]
+.[] |= select(contains({"key": "value2"})) | keys[]
 ```
 
 `.[]` creates an iterator and `|=` assigns a new value to each element. Similarly to the previous function empty values are filtered out using the combination of `select` and `contains`.
