@@ -272,7 +272,10 @@ the same function can also be written using the update-assignment operator `|=`:
 .[] |= select(contains({"key": "value2"})) | keys[]
 ```
 
-`.[]` creates an iterator and `|=` assigns a new value to each element. Similarly to the previous function empty values are filtered out using the combination of `select` and `contains`.## Fetch all available gists from logged in account
+`.[]` creates an iterator and `|=` assigns a new value to each element. Similarly to the previous function empty values are filtered out using the combination of `select` and `contains`.
+
+
+## Fetch all available gists from logged in account
 
 You can use the GitHub API in order to download a list of all public and private gists from a logged in account (i.e. Bearer token):
 
@@ -285,4 +288,4 @@ curl -L \                                                                       
 ```
 
 
-Generated on mar 19 dic 2023 13:47:15 CET
+Generated on mar 19 dic 2023 13:50:10 CET

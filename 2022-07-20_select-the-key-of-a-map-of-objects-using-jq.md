@@ -30,3 +30,5 @@ the same function can also be written using the update-assignment operator `|=`:
 ```
 
 `.[]` creates an iterator and `|=` assigns a new value to each element. Similarly to the previous function empty values are filtered out using the combination of `select` and `contains`.
+
+
